@@ -1,10 +1,10 @@
 @font-face {
-    font-family: font1;
+    font-family: headerfont;
     src: url(fonts/CherryBombOne-Regular.ttf);
 }
 
 @font-face {
-    font-family: font2;
+    font-family: bodyfont;
     src: url(fonts/Lexend-Regular.ttf);
 }
 
@@ -13,17 +13,28 @@
     100% { opacity: 1; }
   }
 
+:root {
+    --textcolor: #005A81;
+    --buttoncolor: #F5FFCD;
+    --bgcolor: #C9FFF9;
+    --linkcolor: #F07A0E;
+    --linkhovercolor: #6BD600;
+    --headercolor: #82D2FF;
+    --headergradient: linear-gradient(#F5FF85, #7AFFDB, #82D2FF);
+    --shadowcolor: rgba(0, 10, 103, 0.3);
+}
+
 body {
     text-align: center;
     margin: 0;
-    background-color: #C9FFF9;
-    color: #005A81;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
     margin-bottom: 80px;
     animation: fadein 1s;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: font1;
+    font-family: headerfont;
 }
 
 h1 {
@@ -38,26 +49,26 @@ h2 {
 
 p {
     font-size: 17px;
-    font-family: font2;
+    font-family: bodyfont;
 }
 
 a {
-    color: #F07A0E;
+    color: var(--linkcolor);
     transition: color 0.1s ease-in-out;
 }
 
 a:hover {
-    color: #6BD600;
+    color: var(--linkhovercolor);
 }
 
 button {
-    font-family: font2;
+    font-family: bodyfont;
     font-size: 17px;
-    color: #005A81;
-    background-color: #F5FFCD;
-    border: 2px solid #005A81;
+    color: var(--textcolor);
+    background-color: var(--buttoncolor);
+    border: 2px solid var(--textcolor);
     border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 10, 103, 0.3);
+    box-shadow: 0px 3px 5px var(--shadowcolor);
     padding: 10px;
     width: 120px;
     margin: 5px;
@@ -67,17 +78,17 @@ button {
 
 button:hover {
     cursor: pointer;
-    color: #F5FFCD;
-    background-color: #005A81;
-    border: 2px solid #005A81;
+    color: var(--buttoncolor);
+    background-color: var(--textcolor);
+    border: 2px solid var(--textcolor);
     transition: ease-in-out 0.1s;
 }
 
 .header {
-    background-color: #82D2FF;
-    background-image: linear-gradient(#F5FF85, #7AFFDB, #82D2FF);
+    background-color: var(--headercolor);
+    background-image: var(--headergradient);
     padding: 40px;
-    box-shadow: 0px 4px 12px rgba(0, 10, 103, 0.3);
+    box-shadow: 0px 4px 12px var(--shadowcolor);
 }
 
 .content {
