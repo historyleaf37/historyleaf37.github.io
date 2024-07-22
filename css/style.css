@@ -1,27 +1,22 @@
 @font-face {
     font-family: headerfont;
-    src: url(fonts/CherryBombOne-Regular.ttf);
+    src: url(fonts/Chewy-Regular.ttf);
 }
 
 @font-face {
     font-family: bodyfont;
-    src: url(fonts/Lexend-Regular.ttf);
+    src: url(fonts/CascadiaCode.ttf);
 }
 
-@keyframes fadein {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
 :root {
-    --textcolor: #005A81;
-    --buttoncolor: #F5FFCD;
-    --bgcolor: #C9FFF9;
-    --linkcolor: #F07A0E;
-    --linkhovercolor: #6BD600;
-    --headercolor: #82D2FF;
-    --headergradient: linear-gradient(#F5FF85, #7AFFDB, #82D2FF);
-    --shadowcolor: rgba(0, 10, 103, 0.3);
+    --textcolor: #000000;
+    --buttoncolor: #FDFFDD;
+    --bgcolor: #FFFFFF;
+    --linkcolor: #0004FF;
+    --linkhovercolor: #00E1FF;
+    --headertextcolor: #0003A1;
+    --headerbgcolor: #60FFC2;
+    --headergradient: linear-gradient(90deg, #68B1FF, #60FFC2, #FFFF6A);
 }
 
 body {
@@ -30,7 +25,6 @@ body {
     background-color: var(--bgcolor);
     color: var(--textcolor);
     margin-bottom: 80px;
-    animation: fadein 1s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,7 +48,6 @@ p {
 
 a {
     color: var(--linkcolor);
-    transition: color 0.1s ease-in-out;
 }
 
 a:hover {
@@ -64,11 +57,10 @@ a:hover {
 button {
     font-family: bodyfont;
     font-size: 17px;
-    color: var(--textcolor);
+    color: var(--headertextcolor);
     background-color: var(--buttoncolor);
-    border: 2px solid var(--textcolor);
+    border: 2px solid var(--headertextcolor);
     border-radius: 10px;
-    box-shadow: 0px 3px 5px var(--shadowcolor);
     padding: 10px;
     width: 120px;
     margin: 5px;
@@ -79,21 +71,21 @@ button {
 button:hover {
     cursor: pointer;
     color: var(--buttoncolor);
-    background-color: var(--textcolor);
-    border: 2px solid var(--textcolor);
-    transition: ease-in-out 0.1s;
+    background-color: var(--headertextcolor);
+    border: 2px solid var(--headertextcolor);
 }
 
 .header {
-    background-color: var(--headercolor);
+    color: var(--headertextcolor);
+    background-color: var(--headerbgcolor);
     background-image: var(--headergradient);
     padding: 40px;
-    box-shadow: 0px 4px 12px var(--shadowcolor);
+    border-bottom: 2px solid var(--headertextcolor)
 }
 
 .content {
     margin: auto;
-    margin-top: 90px;
+    margin-top: 70px;
     width: 700px;
     text-align: left;
 }
